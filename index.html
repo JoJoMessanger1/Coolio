@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SchulApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen">
+    <h1>Willkommen</h1>
+    <input type="password" id="password-input" placeholder="Passwort">
+    <button onclick="checkPassword()">Start</button>
+  </div>
+
+  <div id="app" style="display: none;">
+    <h1>📚 SchulApp</h1>
+
+    <section>
+      <h2>📅 Stundenplan</h2>
+      <input id="stunden-eingabe" placeholder="Neue Stunde">
+      <button onclick="addStunde()">Hinzufügen</button>
+      <ul id="stunden-liste"></ul>
+    </section>
+
+    <section>
+      <h2>✅ To-Do Liste</h2>
+      <input id="todo-eingabe" placeholder="Neue Aufgabe">
+      <button onclick="addTodo()">Hinzufügen</button>
+      <ul id="todo-liste"></ul>
+    </section>
+
+    <section>
+      <h2>📘 Vokabelkarten</h2>
+      <input id="frage" placeholder="Frage">
+      <input id="antwort" placeholder="Antwort">
+      <button onclick="addVokabel()">Hinzufügen</button>
+      <div id="vokabel-liste"></div>
+    </section>
+
+    <section>
+      <h2>🖥️ Bildschirm teilen</h2>
+      <select id="rolle">
+        <option value="lehrer">Lehrer</option>
+        <option value="schueler">Schüler</option>
+      </select>
+      <input id="code" placeholder="Code">
+      <button onclick="verbinde()">Verbinden</button>
+      <div id="video-container"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
